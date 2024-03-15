@@ -1,7 +1,6 @@
 -------------------public sapient-------------------
 design pattern:
-1 iterator pattern
-2 to create complex object
+1 iterator pattern, to create complex object
 3 it intorduce thread safety issues when the singleton instance is instatioed on demand.
 4 builder voilates ocp
 
@@ -353,3 +352,152 @@ list.stream().filter(e -> e.getName().charAt(0).contains('c')).forEach(System.ou
 select Max(salary) from Employee order by salary limit 6;
 
 
+------------------------------Umknown Company-------------------
+Class Node 
+{
+Int data;
+Node next;
+Public Node(int data, Node n){
+This.data = data;
+Ths.next = next;
+}
+}
+Reverse the linked list 
+Node n4 = new Node(4,null);
+Node n3 = new Node(3,n4);
+Node n2 = new Node(2,n3);
+Node n1 = new Node(2,n2);
+1→ 2 →  3 → 4→null
+
+Output ⇒ 4→ 3 → 2 → 1→null
+
+Input → n1
+
+{
+if()
+
+
+}
+
+Int[] arr = [1,1,2,3,4,5,6,3,4,1,2,3]--> Frequency(number of occurrences) of each number 
+freuancy= 3
+Number = 1
+
+Int[] arrOcc = arr.length;
+Int count = 0;
+For loop 1-n
+For each element a[i]
+For loop j = 1 till n
+Print 
+for(int i=0; i<=arrOcc; i++){
+if(arr[i]) ==1{
+count++;
+}
+
+
+}
+
+String,String
+
+map.put(“Kushal”,”1”)
+map.put(“NamanJ”,”2”)
+map.put(“NamanJ”,”3”)
+
+Int hashCode(){
+Return s.length();
+}
+Callable interface
+
+what is dependency injection
+what is cascading - Entity relationships often depend on the existence of another entity, for example the Person–Address relationship. Without the Person, the Address entity doesn't have any meaning of its own. When we delete the Person entity, our Address entity should also get deleted.
+Cascading is the way to achieve this. When we perform some action on the target entity, the same action will be applied to the associated entity.
+what is ORM
+what is callable
+what is eager loading and lazy loading
+@ControllerAdvice is a specialized form of the spring's stereotype annotation which allows handling exceptions across the whole application in one global handling component.
+Aspect-oriented programming isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
+what is eager and lazy loading in hibernate - 
+SOLID principle
+
+what is the functional programming, and why we use this in java 8
+what is the feature added in hashmap java 8
+how equals and hashcode method will work
+what is the return type of run method. - void
+why sleep method in thread class is static - 
+why thread methods are in object class
+java 8 features {
+forEach() method in Iterable interface.
+default and static methods in Interfaces.
+Functional Interfaces and Lambda Expressions.
+Java Stream API for Bulk Data Operations on Collections.
+Java Time API.
+Collection API improvements.
+Concurrency API improvements.
+Java IO improvements.
+}
+
+
+
+
+// package whatever; // don't place package name!
+// Installed Libraries: JSON-Simple, JUNit 4, Apache Commons Lang3
+import java.io.*;
+
+class User{
+  
+  String name;
+  int age;
+  
+}
+class MyCode {
+	public static void main (String[] args) {
+    List<String, Integer> list = new Arraylist();
+    
+    list.add("Kaushal" 26);
+    list.add("Sunny" 25);
+    list.add("Rajan" 27);
+    list.add("harsh" 28);
+    list.add("Devvanshu" 29);
+    
+    List <Integer> ageList = list.stream().filter(p -> p > 25).toList(Collection.class);
+    System.out.println("ageList "+ageList);
+    
+    Singleton.getObject();
+	}
+}
+
+
+class Singleton{
+  private static Singleton singleton = null;
+  
+  private Singleton(){}
+  
+  public static Singleton getObject(){
+    if(singleton == null){
+      sychronized(Singleton.class){
+        if(singleton == null){
+         singleton = new Singleton();
+        }
+      }
+    }
+    return singleton;
+  }
+  
+}
+
+
+
+
+Department 
+Dept_id(PK) 
+Dept_name(Unique)
+
+Employee
+emp_id(PK) 
+emp_name 
+dept_id(FK)
+write a query to find out the dept_name and no of employees
+
+
+select dept_name, count(emp_id) from 
+Department.Dept_id inner join Employee.dept_id group by Dept_name;
