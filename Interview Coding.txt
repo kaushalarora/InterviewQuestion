@@ -1,0 +1,355 @@
+-------------------public sapient-------------------
+design pattern:
+1 iterator pattern
+2 to create complex object
+3 it intorduce thread safety issues when the singleton instance is instatioed on demand.
+4 builder voilates ocp
+
+algorithem
+1 tightly connected
+2 wait()
+3 linkedhashmap
+4 for the size of structure and the data in the structure are constantly changing
+
+Fundamentals
+1 static void somemEthod()
+2 The test1 hashcode() method is less efficent than the Test2 hashCode method
+3 True
+4 2,5 and 6
+5 aggregation
+
+Collection
+1 arraylist failfast : true
+2 lists
+3 no compilaion error
+4 2&3
+5 Givem two objects a and b....
+
+MultiThreading
+1 Lock is acquire on this object
+2 the current thread will sleep for some time while some other threads run
+3 when u try to call wait/notify/notifyall any of this methods for an object.... 
+
+Java memory management
+1 young: all statements are true
+2 B&C
+3 Bootstrap
+
+Java 8 feature
+1 imp of both default and static methods need to be provided in an interface, only default method can be overriden.
+2 java 8 and later
+3 false, true
+4 all of the above
+
+web service
+1 configuration annotation is missing
+2 yes, because it returns  a representaiom of the object that was created.
+3 getforobject(3 params)
+4 SOA is architectural style and web services provide and imp stratergy
+
+spring core 
+1 Exc is thrwing during application context intilization since configuration is ambiguos
+2 JPATransactionManager
+3 false
+4 false 
+5 false
+
+JUNIT/TDo
+1 it ignore the the test method because all test method be declared as public for a successful excution
+2 void asserEquals
+3 asserts the equality of the A and B arrays
+
+-------------------capegemini-------------------
+int arr[] = {1, 9, 3, 15, 7, 6, 5, 8, 2, 4};
+int sum=18;
+
+for(int i=0; i<arr.length;i++){
+	for(int j= i+1; j<arr.length;j++){
+		int expetedValue = arr[i] + arr[j];
+		if(expetedValue == sum){
+			System.out.println("value "+arr[i] + arr[j]);
+		}
+	}
+}
+
+List<String> list = new Arraylist();
+
+List<String> newList = list.stream().filter(e -> e.contains('a')).collect(Collectors);
+
+@functionalInterface
+interface custom{
+	 void accept();
+}
+
+
+List<Integer> list = new ArrayList(Array.asList({1,5;4,7,5,7}));
+
+int largest = list[0];
+for(int value : list){
+	int newValue = value%2;
+	if((!newValue == 0)) && newValue > largest){
+		largest = newValue;
+	}
+}
+
+class Singleton{
+	private static Singleton singleton = null;
+	
+	private Singleton(){}
+	
+	public static Singleton getObject(){
+		synchronized(Singleton.class){
+			if(singleton ==null){
+				singleton = new Singleton();
+			}
+		}
+		return singleton;
+	}
+}
+
+Map<Employee,Double> empMap = new HashMap();
+
+empMap.put(new Employee(), 25000);
+
+
+class Employee{
+	private String name;
+	private int age;
+	private Long phoneNum;
+}
+
+List<Integer> myList = Arrays.asList(10,15,8,10,25,10,98,32,15);
+
+myList.stream().filter(e-> e.get(0)).forEach(System.out::println);
+-------------------capegemini-------------------
+Find closest value to the given number, from the
+given array.
+Given an array of sorted integers and find the closest value to the given number. The array may contain duplicate values and negative numbers.
+
+Example : Array : 2,5,6,7,8,8,9 Target number : 5 Output : 5
+
+Target number : 11 Output : 9
+
+Target Number : 4 Output : 5
+18:33
+Iqra
+-------------------capegemini-------------------
+int arr[] = {23,56,4,7,34};
+int maxValue = arr[0];
+int minValue = arr[0];
+
+for(int i =0;i<arr.length;i++){
+	if(arr[i] > maxValue){
+		maxValue = arr[i];
+	}
+	if(arr[i] < minValue){
+		minValue = arr[i];
+	}
+}
+
+System.out.println("maxValue "+maxValue);
+System.out.println("minValue "+minValue);
+
+String sentence = "I am indian";
+
+StringBuffer bf = new StringBuffer(sentence);
+bf.reverse();
+
+product table
+pid companyname productname qty
+1     sony         tv         100
+2     phillips     speaker    500
+3     sony         xbox       100
+4      samsung     mobile     200
+5      samsung     tv         100
+
+write a query to show each company and there total sales
+sony 200
+phillips 500
+samsung 300
+without using sets
+
+select companyname, qty from product group by companyname;
+
+int arr[] = {2,3,2,3,4,1,5,1};
+
+Map<Integer,Integer> map = new HashMap();
+
+for(int i =0;i<arr.length;i++){
+	if(map.getKey(arr[i]){
+		map.put(arr[i], map.getValue() +1)
+	}else{
+		map.put(arr[i], 1);
+	}
+}
+
+for(Map.Entry<Integer,Integer> m : map.entryset()){
+	System.out.println(m.getKey() +" "+m.getValue());
+}
+-------------------Accolite-------------------
+ 
+
+int[] arr = {4,2,5,-4,-6,5,-7};
+int[] finalArr = new int[arr.length];
+for(int i=0; i< arr.length;i++){
+	if(arr[i]>0)
+		finalArr[i] = arr[i];
+	else if(arr[i]<0)
+		finalArr[i] = arr[i];
+}
+
+
+@Service
+class Service{
+	@Transactional
+	abc(){}
+	
+	
+}
+
+select salary from emp order by salary desc limit 3,1;
+
+
+class Singleton{
+	private static Singleton singleton = null;
+
+	private Singleton(){}
+	
+	public static Singleton getObject(){
+		
+	}
+}
+
+enum Car{
+	HUNDAYI(1), INOVA(2);
+	
+	Stirng value;
+	
+	void get(String value){
+		this.value = value;
+	}
+}
+-------------------EPAM - aliaksander yazenin-------------------
+
+Thread
+SDLC
+definition of done
+Gitlab CI
+TeamCity
+FIRST
+TDD
+KISS
+DRY
+ACID
+N+1 problem
+Spring core
+Reflection API
+Richardson restful maturity lvls 
+HATEOAS
+-------------------Grazitti-------------------
+
+int count =0;
+void method(){
+	if(count<10)
+		System.out.println("Kaushal");
+	count++;
+	method();
+}
+
+
+List<Employee> list;
+
+list.stream().filter(e -> e.getName())
+
+String name = My name is kaushal
+String str[] = name.split(" ");
+
+String finalName ;
+for(int i=0;i < str.length; i++){
+	finalName+= str[i].reverse()+" ";
+}
+
+System.out.println(finalName);
+-------------------Salesforce-------------------
+
+
+String str = "Kaushal";
+
+char[] ch = str.toCharArray();
+str = "";
+for(int i = ch.length-1 ; i >= 0; i--){
+	str += ch[i];
+}
+-------------------FIS-------------------
+
+
+class Singleton{
+	private static Singleton singleton = null;
+	
+	private Singleton(){}
+	
+	public static Singleton getInstance(){
+		if(singleton == null){
+			synchronized(Singleton.class){
+				if(singleton == null){
+					singleton = new Singleton();
+				}
+			}		
+		}
+		return singleton;
+	}
+
+}
+
+
+select Max(Salary) from Employee;
+-------------------Capegemini-------------------
+
+
+final class Immutable{
+	final private StringBuilder value;
+	
+	public Immutable(StringBuilder value){
+	this.value = value;	
+	}
+
+	private StringBuilder getValue(){
+		return this.value;
+	}
+}
+
+class Singleton{
+	private static Singleton singleton = null;
+	
+	public static synchronized Singleton getinstance(){
+		if(singleton == null)
+			singleton = new Singleton();
+		
+		return singleton;
+	}
+}
+
+char[] ch = {'a','c','a','b','d'};
+
+Map<Character,Integer> map = new Hashmap();
+
+for(int i =0; i<ch.length; i++){
+	if(map.get(ch[i])){
+		
+	}
+	else{
+		map.put();
+	}
+}
+for(Map.Entry<Character,Integer> entry : map.entryset()){
+	if()
+}
+
+
+List<Employee> list;
+
+list.stream().filter(e -> e.getName().charAt(0).contains('c')).forEach(System.out::println);
+
+select Max(salary) from Employee order by salary limit 6;
+
+
