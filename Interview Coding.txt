@@ -1,8 +1,8 @@
 -------------------public sapient-------------------
 design pattern:
-1 iterator pattern, to create complex object
-3 it intorduce thread safety issues when the singleton instance is instatioed on demand.
-4 builder voilates ocp
+ iterator pattern, to create complex object
+it intorduce thread safety issues when the singleton instance is instatioed on demand.
+builder voilates ocp
 
 algorithem
 1 tightly connected
@@ -120,6 +120,44 @@ class Employee{
 List<Integer> myList = Arrays.asList(10,15,8,10,25,10,98,32,15);
 
 myList.stream().filter(e-> e.get(0)).forEach(System.out::println);
+
+capegemini interview>>>>>>>>>
+
+function and predicate
+optional class methods
+can we create own serialversionUId in serialization? if automatically created then it will work on other system?
+
+
+List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+Int firstValue = listOfIntegers.get(0);
+
+for (Integer value: listOfIntegers){
+	if(value > firstValue)
+		System.out.println(value);
+}
+
+select count(#) as deptCount from EmployeeInfo group by department order by desc deptCount;
+
+EmployeeInfo : 
+
+EmpID
+
+EmpFname
+
+EmpLname
+
+Department
+
+Project
+
+Address
+
+DOB
+
+Gender
+
+Write a query to fetch the department-wise count of employees sorted by employee count in descending order.
+
 -------------------capegemini-------------------
 Find closest value to the given number, from the
 given array.
