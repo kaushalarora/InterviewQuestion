@@ -146,14 +146,42 @@ autoboxing and unboxing in Java
 call by value or reference
 why stack memory is required in Java - used for static memory allocation and the execution of a thread
 can two objects have same hashcode - It is perfectly legal for two objects to have the same hashcode. If two objects are equal (using the equals() method) then they have the same hashcode.
-what is a native keyword in java
-solid principles java
+what is a native keyword in java?
+solid principles java?
 
 Java 8 questions - 
 Java 8 features - lambda, stream, functional interface.
 Streams - sequential stream, parallel stream.
 Optional class in Java 8 - Java 8 has introduced a new class Optional in Java. util package. It can help in writing neat code without using too many null checks. By using Optional, we can specify alternate values to return or alternate code to run
+Callable interface
 
+what is dependency injection
+what is cascading - Entity relationships often depend on the existence of another entity, for example the Person–Address relationship. Without the Person, the Address entity doesn't have any meaning of its own. When we delete the Person entity, our Address entity should also get deleted.
+Cascading is the way to achieve this. When we perform some action on the target entity, the same action will be applied to the associated entity.
+what is ORM
+what is callable
+what is eager loading and lazy loading
+@ControllerAdvice is a specialized form of the spring's stereotype annotation which allows handling exceptions across the whole application in one global handling component.
+Aspect-oriented programming isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
+what is eager and lazy loading in hibernate - 
+SOLID principle
+
+what is functional programming, and why do we use this in Java 8
+what is the feature added in hashmap java 8
+how equals and hashcode method will work
+what is the return type of the run method? - void
+why the sleep method in thread class is static - 
+why thread methods in object class
+java 8 features {
+	forEach() method in the Iterable interface.
+	default and static methods in Interfaces.
+	Functional Interfaces and Lambda Expressions.
+	Java Stream API for Bulk Data Operations on Collections.
+	Java Time API.
+	Collection API improvements.
+	Concurrency API improvements.
+	Java IO improvements.
+}
 
 Springboot question - 
 what is ioc in spring
