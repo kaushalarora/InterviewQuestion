@@ -1,64 +1,5 @@
--------------------public sapient-------------------
-design pattern:
- iterator pattern, to create complex object
-it intorduce thread safety issues when the singleton instance is instatioed on demand.
-builder voilates ocp
-
-algorithem
-1 tightly connected
-2 wait()
-3 linkedhashmap
-4 for the size of structure and the data in the structure are constantly changing
-
-Fundamentals
-1 static void somemEthod()
-2 The test1 hashcode() method is less efficent than the Test2 hashCode method
-3 True
-4 2,5 and 6
-5 aggregation
-
-Collection
-1 arraylist failfast : true
-2 lists
-3 no compilaion error
-4 2&3
-5 Givem two objects a and b....
-
-MultiThreading
-1 Lock is acquire on this object
-2 the current thread will sleep for some time while some other threads run
-3 when u try to call wait/notify/notifyall any of this methods for an object.... 
-
-Java memory management
-1 young: all statements are true
-2 B&C
-3 Bootstrap
-
-Java 8 feature
-1 imp of both default and static methods need to be provided in an interface, only default method can be overriden.
-2 java 8 and later
-3 false, true
-4 all of the above
-
-web service
-1 configuration annotation is missing
-2 yes, because it returns  a representaiom of the object that was created.
-3 getforobject(3 params)
-4 SOA is architectural style and web services provide and imp stratergy
-
-spring core 
-1 Exc is thrwing during application context intilization since configuration is ambiguos
-2 JPATransactionManager
-3 false
-4 false 
-5 false
-
-JUNIT/TDo
-1 it ignore the the test method because all test method be declared as public for a successful excution
-2 void asserEquals
-3 asserts the equality of the A and B arrays
-
--------------------capegemini-------------------
+***********************************************************************************************capegemini***********************************************************************************************
+what is iterator design pattern
 int arr[] = {1, 9, 3, 15, 7, 6, 5, 8, 2, 4};
 int sum=18;
 
@@ -73,11 +14,11 @@ for(int i=0; i<arr.length;i++){
 
 List<String> list = new Arraylist();
 
-List<String> newList = list.stream().filter(e -> e.contains('a')).collect(Collectors);
+List<String> newList = list.stream().filter(e -> e.contains('a')).collect(Collectors.toList);
 
 @functionalInterface
 interface custom{
-	 void accept();
+	 void accept(T t);
 }
 
 
@@ -107,9 +48,7 @@ class Singleton{
 }
 
 Map<Employee,Double> empMap = new HashMap();
-
 empMap.put(new Employee(), 25000);
-
 
 class Employee{
 	private String name;
@@ -118,16 +57,11 @@ class Employee{
 }
 
 List<Integer> myList = Arrays.asList(10,15,8,10,25,10,98,32,15);
-
 myList.stream().filter(e-> e.get(0)).forEach(System.out::println);
 
-capegemini interview>>>>>>>>>
-
-function and predicate
+function and predicate interface
 optional class methods
 can we create own serialversionUId in serialization? if automatically created then it will work on other system?
-
-
 List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
 Int firstValue = listOfIntegers.get(0);
 
@@ -136,8 +70,7 @@ for (Integer value: listOfIntegers){
 		System.out.println(value);
 }
 
-select count(#) as deptCount from EmployeeInfo group by department order by desc deptCount;
-
+select count(*) as deptCount from EmployeeInfo group by department order by desc deptCount;
 EmployeeInfo : 
 
 EmpID
@@ -158,23 +91,15 @@ Gender
 
 Write a query to fetch the department-wise count of employees sorted by employee count in descending order.
 
--------------------capegemini-------------------
-Find closest value to the given number, from the
-given array.
+Find closest value to the given number, from the given array.
 Given an array of sorted integers and find the closest value to the given number. The array may contain duplicate values and negative numbers.
-
 Example : Array : 2,5,6,7,8,8,9 Target number : 5 Output : 5
-
 Target number : 11 Output : 9
-
 Target Number : 4 Output : 5
-18:33
-Iqra
--------------------capegemini-------------------
+
 int arr[] = {23,56,4,7,34};
 int maxValue = arr[0];
 int minValue = arr[0];
-
 for(int i =0;i<arr.length;i++){
 	if(arr[i] > maxValue){
 		maxValue = arr[i];
@@ -188,10 +113,8 @@ System.out.println("maxValue "+maxValue);
 System.out.println("minValue "+minValue);
 
 String sentence = "I am indian";
-
 StringBuffer bf = new StringBuffer(sentence);
 bf.reverse();
-
 product table
 pid companyname productname qty
 1     sony         tv         100
@@ -207,11 +130,8 @@ samsung 300
 without using sets
 
 select companyname, qty from product group by companyname;
-
 int arr[] = {2,3,2,3,4,1,5,1};
-
 Map<Integer,Integer> map = new HashMap();
-
 for(int i =0;i<arr.length;i++){
 	if(map.getKey(arr[i]){
 		map.put(arr[i], map.getValue() +1)
@@ -223,124 +143,7 @@ for(int i =0;i<arr.length;i++){
 for(Map.Entry<Integer,Integer> m : map.entryset()){
 	System.out.println(m.getKey() +" "+m.getValue());
 }
--------------------Accolite-------------------
- 
 
-int[] arr = {4,2,5,-4,-6,5,-7};
-int[] finalArr = new int[arr.length];
-for(int i=0; i< arr.length;i++){
-	if(arr[i]>0)
-		finalArr[i] = arr[i];
-	else if(arr[i]<0)
-		finalArr[i] = arr[i];
-}
-
-
-@Service
-class Service{
-	@Transactional
-	abc(){}
-	
-	
-}
-
-select salary from emp order by salary desc limit 3,1;
-
-
-class Singleton{
-	private static Singleton singleton = null;
-
-	private Singleton(){}
-	
-	public static Singleton getObject(){
-		
-	}
-}
-
-enum Car{
-	HUNDAYI(1), INOVA(2);
-	
-	Stirng value;
-	
-	void get(String value){
-		this.value = value;
-	}
-}
--------------------EPAM - aliaksander yazenin-------------------
-
-Thread
-SDLC
-definition of done
-Gitlab CI
-TeamCity
-FIRST
-TDD
-KISS
-DRY
-ACID
-N+1 problem
-Spring core
-Reflection API
-Richardson restful maturity lvls 
-HATEOAS
--------------------Grazitti-------------------
-
-int count =0;
-void method(){
-	if(count<10)
-		System.out.println("Kaushal");
-	count++;
-	method();
-}
-
-
-List<Employee> list;
-
-list.stream().filter(e -> e.getName())
-
-String name = My name is kaushal
-String str[] = name.split(" ");
-
-String finalName ;
-for(int i=0;i < str.length; i++){
-	finalName+= str[i].reverse()+" ";
-}
-
-System.out.println(finalName);
--------------------Salesforce-------------------
-
-
-String str = "Kaushal";
-
-char[] ch = str.toCharArray();
-str = "";
-for(int i = ch.length-1 ; i >= 0; i--){
-	str += ch[i];
-}
--------------------FIS-------------------
-
-
-class Singleton{
-	private static Singleton singleton = null;
-	
-	private Singleton(){}
-	
-	public static Singleton getInstance(){
-		if(singleton == null){
-			synchronized(Singleton.class){
-				if(singleton == null){
-					singleton = new Singleton();
-				}
-			}		
-		}
-		return singleton;
-	}
-
-}
-
-
-select Max(Salary) from Employee;
--------------------Capegemini-------------------
 
 
 final class Immutable{
@@ -389,8 +192,123 @@ list.stream().filter(e -> e.getName().charAt(0).contains('c')).forEach(System.ou
 
 select Max(salary) from Employee order by salary limit 6;
 
+***********************************************************************************************Accolite***********************************************************************************************
+ 
 
-------------------------------Umknown Company-------------------
+int[] arr = {4,2,5,-4,-6,5,-7};
+int[] finalArr = new int[arr.length];
+for(int i=0; i< arr.length;i++){
+	if(arr[i]>0)
+		finalArr[i] = arr[i];
+	else if(arr[i]<0)
+		finalArr[i] = arr[i];
+}
+
+
+@Service
+class Service{
+	@Transactional
+	abc(){}
+	
+	
+}
+
+select salary from emp order by salary desc limit 3,1;
+
+
+class Singleton{
+	private static Singleton singleton = null;
+
+	private Singleton(){}
+	
+	public static Singleton getObject(){
+		
+	}
+}
+
+enum Car{
+	HUNDAYI(1), INOVA(2);
+	
+	Stirng value;
+	
+	void get(String value){
+		this.value = value;
+	}
+}
+**********************************************************************************EPAM - aliaksander yazenin***********************************************************************************************
+
+Thread
+SDLC
+definition of done
+Gitlab CI
+TeamCity
+FIRST
+TDD
+KISS
+DRY
+ACID
+N+1 problem
+Spring core
+Reflection API
+Richardson restful maturity lvls 
+HATEOAS
+***********************************************************************************************Grazitti***********************************************************************************************
+
+int count =0;
+void method(){
+	if(count<10)
+		System.out.println("Kaushal");
+	count++;
+	method();
+}
+
+
+List<Employee> list;
+
+list.stream().filter(e -> e.getName())
+
+String name = My name is kaushal
+String str[] = name.split(" ");
+
+String finalName ;
+for(int i=0;i < str.length; i++){
+	finalName+= str[i].reverse()+" ";
+}
+
+System.out.println(finalName);
+***********************************************************************************************Salesforce***********************************************************************************************
+
+String str = "Kaushal";
+
+char[] ch = str.toCharArray();
+str = "";
+for(int i = ch.length-1 ; i >= 0; i--){
+	str += ch[i];
+}
+***********************************************************************************************FIS***********************************************************************************************
+
+
+class Singleton{
+	private static Singleton singleton = null;
+	
+	private Singleton(){}
+	
+	public static Singleton getInstance(){
+		if(singleton == null){
+			synchronized(Singleton.class){
+				if(singleton == null){
+					singleton = new Singleton();
+				}
+			}		
+		}
+		return singleton;
+	}
+
+}
+
+
+select Max(Salary) from Employee;
+*************************************************************************Umknown Company*************************************************************************
 Class Node 
 {
 Int data;
@@ -444,42 +362,7 @@ map.put(“NamanJ”,”3”)
 Int hashCode(){
 Return s.length();
 }
-Callable interface
 
-what is dependency injection
-what is cascading - Entity relationships often depend on the existence of another entity, for example the Person–Address relationship. Without the Person, the Address entity doesn't have any meaning of its own. When we delete the Person entity, our Address entity should also get deleted.
-Cascading is the way to achieve this. When we perform some action on the target entity, the same action will be applied to the associated entity.
-what is ORM
-what is callable
-what is eager loading and lazy loading
-@ControllerAdvice is a specialized form of the spring's stereotype annotation which allows handling exceptions across the whole application in one global handling component.
-Aspect-oriented programming isolates the concerns of your application, reduces code clutter, and improves the maintainability and readability of your code.
-what is eager and lazy loading in hibernate - 
-SOLID principle
-
-what is the functional programming, and why we use this in java 8
-what is the feature added in hashmap java 8
-how equals and hashcode method will work
-what is the return type of run method. - void
-why sleep method in thread class is static - 
-why thread methods are in object class
-java 8 features {
-forEach() method in Iterable interface.
-default and static methods in Interfaces.
-Functional Interfaces and Lambda Expressions.
-Java Stream API for Bulk Data Operations on Collections.
-Java Time API.
-Collection API improvements.
-Concurrency API improvements.
-Java IO improvements.
-}
-
-
-
-
-// package whatever; // don't place package name!
-// Installed Libraries: JSON-Simple, JUNit 4, Apache Commons Lang3
-import java.io.*;
 
 class User{
   
@@ -505,26 +388,6 @@ class MyCode {
 }
 
 
-class Singleton{
-  private static Singleton singleton = null;
-  
-  private Singleton(){}
-  
-  public static Singleton getObject(){
-    if(singleton == null){
-      sychronized(Singleton.class){
-        if(singleton == null){
-         singleton = new Singleton();
-        }
-      }
-    }
-    return singleton;
-  }
-  
-}
-
-
-
 
 Department 
 Dept_id(PK) 
@@ -535,7 +398,5 @@ emp_id(PK)
 emp_name 
 dept_id(FK)
 write a query to find out the dept_name and no of employees
-
-
 select dept_name, count(emp_id) from 
 Department.Dept_id inner join Employee.dept_id group by Dept_name;
