@@ -84,9 +84,12 @@ second highest salary
 select Max(salary) from tableName where salary < (select Max(salary) from tablName);
 agile methodology steps
 can we have static variables and methods in the abstract class
-can we use static method in Java
+can we use the static method in Java
 what will happen if we remove the static keyword from the main method?
 
+
+
+*****************************************************************Core java question*******************************************************************************************************
 can we call a static method from a non-static method - yes, but we can not call a non-static method from the static method without creating an instance.
 can we inherit static method in Java - yes, overload method only, override leads to method hiding
 Why can’t we override static methods in Java? - This is because static methods are not associated with the instance of a class, but with the class itself
@@ -104,3 +107,66 @@ types of inheritance in Java
 prototype, singleton scope of bean in spring
 Stream supports many aggregate operations like filter, map, limit, reduce, find, and match to customize the 
 original data into a different form according to the needs of the programmer.
+Who developed Java in which year? - Java was created at Sun Microsystems, Inc., where James Gosling - 1991 - (acquired by Oracle)
+What is Class and objects?
+OOPs concepts.
+what is waiting to notify and notify all, yield and join difference in Java
+what is final, and finally, finalize
+method available in the object class.
+marker interface in Java - no methods or constants inside it - Serializable, Cloneable, and Remote interface
+functional interface in Java - Consumer, Supplier, Function, and Predicate 
+access specifiers of method and class.
+Synchronized keyword.
+why thread method in the object class, thread methods, and their specifaction.
+thread life cycle in Java
+how many ways we can create thread. how many times can we call start on a single object? - single time
+Why we use String, StringBuffer, StringBuilder - in which memory string will be stored in jvm.
+Naming Conventions of the class.
+can we use synchronized, static under method? - yes
+Design pattern - creational(singleton, factory), behavioral, structural.
+How to maintain thread concurrency in java
+what is object-level lock in Java
+How to avoid something from serialization. - The transient keyword in Java
+why we need serialization in Java - In Java, we create several objects that live and die accordingly, and every object will certainly die when the JVM dies. ... Well, serialization allows us to convert the state of an object into a byte stream, which then can be saved into a file on the local disk or sent over the network to any other machine
+can we change the return type in method overriding in java - Yes. Overridden methods can have different return type.
+method overloading in child class java - Usually, method overloading happens inside a single class, Overloading can happen in same class as well as parent-child class relationship whereas overriding happens only in an inheritance relationship
+How can we assign values to abstract class variables?
+how can we make the ArrayList thread-safe - Use Collections.synchronizedList().
+In Java we use object by value or reference - call by value only(This will work only for primitive type (because primitive types are passed by value))
+throws vs throw.
+why do we use primitive type if we have a wrapper in Java.
+what is checked and unchecked exception in Java.
+ArrayList vs LinkedList java
+hashmap internal working
+what are the java 7 features - Binary Literals, Strings in switch Statements, The try-with-resources Statement.
+what are the Java 8 features - Lambda expressions ( It helps to iterate, filter, and extract data from the collection.), Method references, Functional interfaces, Stream API, Optional class, Collectors class, ForEach() method
+why Lambda expressions - To provide the implementation to Functional interface, Less coding.
+null is an object or string in Java - The Java programming language distinguishes between null and empty strings. An empty string is a string instance of zero length, whereas a null string has no value at all. An empty string is represented as "" . It is a character sequence of zero characters.
+autoboxing and unboxing in Java
+call by value or reference
+why stack memory is required in Java - used for static memory allocation and the execution of a thread
+can two objects have same hashcode - It is perfectly legal for two objects to have the same hashcode. If two objects are equal (using the equals() method) then they have the same hashcode.
+what is a native keyword in java
+solid principles java
+
+Java 8 questions - 
+Java 8 features - lambda, stream, functional interface.
+Streams - sequential stream, parallel stream.
+Optional class in Java 8 - Java 8 has introduced a new class Optional in Java. util package. It can help in writing neat code without using too many null checks. By using Optional, we can specify alternate values to return or alternate code to run
+
+
+Springboot question - 
+what is ioc in spring
+what is dependency injection?
+What is @SptringbootApplication, @autowried, @repository, @service, @component
+@Controller vs @RestController
+@Component vs @bean
+@controlleradvice
+@circuitbreaker
+How we can run Springboot jar via CLI - java -jar jar name
+The @ControllerAdvice is an annotation, to handle the exceptions globally.
+The @ExceptionHandler is an annotation used to handle the specific exceptions and send the custom responses to the client.
+
+
+Database question - 
+JpaRepository extends PagingAndSortingRepository which in turn extends CrudRepository
