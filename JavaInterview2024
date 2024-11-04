@@ -198,3 +198,124 @@ The @ExceptionHandler is an annotation used to handle the specific exceptions an
 
 Database question - 
 JpaRepository extends PagingAndSortingRepository which in turn extends CrudRepository
+
+*****************************
+How do you merge two unsorted arrays into single sorted array without duplicate using Streams? 
+int[] a = new int[] {4, 2, 5, 1}; 
+int[] b = new int[] {8, 1, 9, 5};
+
+int[] finalArr = IntStream.concat(Arrays.stream(a), Arrays.stream(b)).distinct().sorted().toArray();
+
+
+
+find the third highest marks of student
+id/name/marks
+
+listStudent.stream().sorted(Comparator.comparing( e -> e.getvalue())).toList().get(2);
+
+what is primary/qualifier annotaion
+what is put and patch
+
+List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+ 
+highest number that exists on a list java8?
+ 
+how do you get the second friday of next month in java 8
+ 
+List<Integer> list = Arrays.asList(10,15,8,49,25,98,32);
+ 
+find out all the even numbers that exist in the list using Stream functions
+
+what is zookeeper used for in kafka
+
+
+class PassA 
+{    public static void main(String[] args) 
+    {   PassA p = new PassA();
+        p.start();
+	}
+    void start() 
+    {   long [] a1 = {3,4,5};
+        long [] a2 = fix(a1);
+        System.out.print(a1[0] + a1[1] + a1[2] + " ");
+        System.out.println(a2[0] + a2[1] + a2[2]); 
+	}
+    long [] fix(long [] a3) 
+    {   a3[1] = 7;
+        return a3;  
+	}
+}
+
+15 15
+
+Student, College
+StuId		CollId
+StuName		StuId
+StuAge		CollName
+
+result: student details with college name
+
+select Stu.stuId, Stu.Stuname, Stu.StuAge, Coll.Collname from Student As Stu Left join College As Coll ON Stu.stuId = Coll.stuId;
+
+
+
+
+table studentMark
+
+studId  Subject  Mark
+
+1          Eng        43
+1          Math      47
+2          Eng        41
+2          Math      39
+
+select StudId, Max(Mark) as hisgMark from studentMark group by studId;
+
+
+
+int[] arr = {4,5,6,3,8,1,2};
+
+int target = 10;
+
+for(int i=0; i< arr.length; i++){
+	for(int j = i+1; j< arr.length; j++){
+		if(arr[i] + arr[j] == target){
+			System.out.println(arr[i] +", "+ arr[j]);
+		}
+	}
+}
+*********************************************
+what is AOP, controlleradvice, what is jwt, oath tokens
+what is put and patch
+completablefuture in java
+id token, access toke, reresh token
+transitive dependency in pom.xml
+hash collison in java 8
+what is change in hashmap in java 8
+hashmap vs 
+what is transient keyword.
+what is java 8 feature and why it introdcued new memory metaspace?
+why stream introduced if we have java 7 opeartions to perform.
+
+what is load factor in java 8
+put vs patch method in java
+Microservices, springboot, JDBC, JPA, lambda queries, kafka
+what is class level and object level lock
+*********************************************
+Move all negative numbers to beginning and positive to end with constant extra space
+select Salary, from emp order by salary desc limit 
+How to check spring securiy
+learn java8, restapi- asking these questions right now in the market by -Boopathy altimetrik
+can we reuse stream in java - No, But with supplier interface we can
+What is the difference between iterator and iterable and how to use them?
+What is Amazon EC2?
+internal working of hashmap
+spring security in spring boot
+types of design pattern
+recordfilterstrategy
+what is marker interface
+what is cascading
+what is first and second level cache
+what is function and procedure
+what is dml ddl and dcl in sql
+*********************************************
